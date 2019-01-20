@@ -13,7 +13,7 @@ class FacultyController extends Controller
 
     //
     public function index(){
-        $faculties=Faculty::with(['fields','students'])->get();
+        $faculties=Faculty::with(['fields:id,faculty_id,title','students'])->get(); //we make fields limit for use it in with and show some of fileds (not all)
         $faculties->makeHidden(['created_at','updated_at']); //make hidden some fields
         return $faculties;
 
