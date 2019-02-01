@@ -16,7 +16,17 @@ window.Vue = require('vue');
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 
+let routes=[
+    {path:'/dashboard',component: require('./components/Dashboard')},
+    {path:'/profile',component: require('./components/Profile')}
+]
+
+const router= new VueRouter([
+    routes
+])
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
@@ -29,5 +39,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    router
 });
