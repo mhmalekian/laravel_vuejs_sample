@@ -25,7 +25,8 @@ let routes=[
 ]
 
 const router= new VueRouter({
-        routes
+    mode: 'history',
+    routes
 })
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
