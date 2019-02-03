@@ -24,9 +24,10 @@ let routes=[
     {path:'/profile',component: require('./components/Profile')}
 ]
 
-const router= new VueRouter([
+const router= new VueRouter({
+    mode: 'history',
     routes
-])
+})
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
