@@ -65,7 +65,6 @@
                                     </a>
                                     <router-link to="./dashboard" class="dropdown-item nav-link">Dashboard</router-link>
                                     <router-link to="./profile" class="dropdown-item nav-link">Profile</router-link>
-
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
