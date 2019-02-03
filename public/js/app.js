@@ -50751,12 +50751,14 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.use(vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]);
 var routes = [{
   path: '/dashboard',
-  component: __webpack_require__(/*! ./components/Dashboard */ "./resources/js/components/Dashboard.vue")
+  component: __webpack_require__(/*! ./components/Dashboard.vue */ "./resources/js/components/Dashboard.vue").default
 }, {
   path: '/profile',
-  component: __webpack_require__(/*! ./components/Profile */ "./resources/js/components/Profile.vue")
+  component: __webpack_require__(/*! ./components/Profile.vue */ "./resources/js/components/Profile.vue").default
 }];
-var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]([routes]);
+var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
+  routes: routes
+});
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")); // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key)))
 
@@ -51056,8 +51058,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/mhmalekian/PhpstormProjects/newsadaf/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/mhmalekian/PhpstormProjects/newsadaf/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\mhmalekian\PhpstormProjects\newsadaf\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\mhmalekian\PhpstormProjects\newsadaf\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

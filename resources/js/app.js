@@ -20,13 +20,13 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 let routes=[
-    {path:'/dashboard',component: require('./components/Dashboard')},
-    {path:'/profile',component: require('./components/Profile')}
+    {path:'/dashboard',component: require('./components/Dashboard.vue').default},
+    {path:'/profile',component: require('./components/Profile.vue').default}
 ]
 
-const router= new VueRouter([
-    routes
-])
+const router= new VueRouter({
+        routes
+})
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
 // const files = require.context('./', true, /\.vue$/i)
