@@ -26,6 +26,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
+
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -58,13 +59,21 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <router-link to="./dashboard" class="nav-link dropdown-item">Dashboard</router-link>
+                                    <router-link to="./profile" class="nav-link dropdown-item">Profile</router-link>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+<<<<<<< HEAD
                                     <router-link to="./dashboard" class="dropdown-item nav-link">Dashboard</router-link>
                                     <router-link to="./profile" class="dropdown-item nav-link">Profile</router-link>
+=======
+
+
+>>>>>>> 21dea03fc333ef395dd935e9b221b804bf426502
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -77,7 +86,9 @@
         </nav>
 
         <main class="py-4">
+
             @yield('content')
+            <router-view></router-view>
         </main>
     </div>
     @stack('new_script')
