@@ -67,8 +67,13 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+<<<<<<< HEAD
+                                    <router-link to="./dashboard" class="dropdown-item nav-link">Dashboard</router-link>
+                                    <router-link to="./profile" class="dropdown-item nav-link">Profile</router-link>
+=======
 
 
+>>>>>>> 21dea03fc333ef395dd935e9b221b804bf426502
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
